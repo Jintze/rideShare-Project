@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="rideShare-style.css">
+</head>
+<body>
+
+<header>
+<div class="banner-container">
+    <div class="banner-inner">
+        <a href="https://www.ualberta.ca/" class="site-title">University of Alberta</a>
+        <div class="banner-logo">
+            <span class="site-logo"></span>
+            
+        </div>
+    </div>
+</div>
+</header>
+
+<br>
+
+I am a: 
+<input type="button" name="personType" value="Driver" onclick="showDriverTripForm()" />
+
+<input type="button" name="personType" value="Passenger" onclick="showPassengerTripForm()" />
+
+
+
+<div id="driverTripData" style="display:none;"><br/>
+	<form method="post">
+		Which vehicle are you taking?: <input type="Text" name="personName" required> <br>
+	</form>
+</div>
+
+<div id="passengerTripData" style="display:none;"><br/>
+</div>
+
+<div id="tripForm" style="display:none;"><br/>
+	<form method="post" action="placeholder.php">
+		<input type="submit" name="submit" value="Submit"/>
+	</form>
+</div>
+
+
+<script >
+	function showDriverTripForm(){
+		document.getElementById("driverTripData").style.display = 'block';
+		hidePassengerTripForm();
+		showTripForm();
+	}
+</script>
+
+<script >
+	function hideDriverTripForm(){
+		document.getElementById("driverTripData").style.display = 'none';
+	}
+</script>
+
+<script >
+	function showPassengerTripForm(){
+		document.getElementById("passengerTripData").style.display = 'block';
+		hideDriverTripForm();
+		showTripForm();
+	}
+</script>
+
+<script >
+	function hidePassengerTripForm(){
+		document.getElementById("passengerTripData").style.display = 'none';
+	}
+</script>
+
+<script >
+	function showTripForm(){
+		document.getElementById("tripForm").style.display = 'block';
+	}
+</script>
+
+</body>
+</html>

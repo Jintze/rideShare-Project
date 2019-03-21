@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<HTML>
+
+<BODY>
+<form method="post" action="rideShare-driverPassengerSelection.php">
+
+	Person Type: <select name="personType" required>
+		<option hidden disabled selected value> -- select an option -- </option>
+		<option value="student">Student</option>
+		<option value="student-staff">Student-Staff (RA, etc.) </option>
+		<option value="staff">Staff</option>
+	</select><br>
+
+	Name: <input type="Text" name="personName" required> <br>
+
+	Gender: <select name="gender" required>
+		<option hidden disabled selected value> -- select an option -- </option>
+		<option value="male">Male</option>
+		<option value="female">Female</option>
+		<option value="other">Other/Prefer Not to Say</option>
+	</select> <br>
+
+	<label for="birthdate">Birthdate: </label><input id="birthdate" type="date" value="birthdate" required> <br>
+
+	Phone Number: <input type="tel" name="phoneNumber" required> <br>
+
+	Email Address: <input type="email" name="email" required> <br>
+
+	<input type="Submit" name="submit" value="Submit" required>
+</form>
+</BODY>
+
+</HTML>
